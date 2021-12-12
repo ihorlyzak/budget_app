@@ -73,6 +73,7 @@ function css() {
         )
         .pipe(
             autoprefixer({
+                grid: true,
                 overrideBrowserslist: ["last 5 versions"],
                 cascade: true
             })
@@ -139,7 +140,7 @@ function clean(params) {
     return del(path.clean);
 }
 
-const build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
+const build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts,));
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fonts = fonts;

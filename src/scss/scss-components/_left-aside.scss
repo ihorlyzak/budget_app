@@ -1,5 +1,5 @@
 .scroll {  
-    width: 68px;
+    padding: 0 15px;
     border-width: 1px;
     border-right-style: solid;
     border-image: 
@@ -21,15 +21,15 @@
         &-item {         
             display: block;
             margin: 10px 0;         
-            width: 10px;
-            height: 10px;          
+            width: 12px;
+            height: 12px;          
             border-radius: $full-border-radius;
             background-color: #C2C8DE;
             transition: {
                 duration: $main-duration;
                 property: 'background-color';
-            }     
-
+            }   
+       
             &_active {               
                 background: $to-bottom-red-gradient;
             }
@@ -40,3 +40,4 @@
         }
     }
 }
+

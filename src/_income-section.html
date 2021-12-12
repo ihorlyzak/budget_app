@@ -1,0 +1,42 @@
+<section class="income section" data-section="income">
+
+    <div class="income-header">
+        <div class="title-container">
+            <h2 class="second__title">My <span class="second__title_red">Income</span></h2>
+        </div>
+
+        <!-- delete -->
+        <div class="button-container">
+            <i class="fas fa-long-arrow-alt-up arrow-up" data-arrow-to="expenses"></i>
+        </div>
+        <!-- delete -->
+    </div>
+
+    <div class="income-container">
+
+        <div class="income-left">
+
+            @@include('_income-table-component.html')
+
+            <div class="table__buttons">
+                <button class="button button_small">
+                    <p>Show full income</p>
+                </button>
+                <button class="button button_small button_inverted-gradient">
+                    <p>Show all
+                        categories</p>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="income-right">
+
+            @@include('_income-component.html')
+
+        </div>
+
+    </div>
+
+</section>
+

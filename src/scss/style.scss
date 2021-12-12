@@ -3,6 +3,9 @@
 @import 'base/variables';
 @import 'base/mixins';
 
+html {
+    overflow: hidden;
+}
 
 @import 'scss-components/global';
 //! body, h
@@ -15,6 +18,9 @@
 
 @import 'scss-components/right-aside';
 //? right aside
+
+@import 'scss-components/sidebar-navigation';
+// ? sidebar-navigation
 
 @import 'scss-components/logo';
 // * logo 
@@ -37,7 +43,32 @@
 @import 'scss-components/expenses-section';
 // ? expenses-section
 
-@import 'scss-components/table';
+@import 'scss-components/tables';
 // ? table-section
 
+@import 'scss-components/income-section';
+// ? income-section
 
+@import 'scss-components/popups';
+// ? popups
+
+
+.background_green {
+    background-color: $color-green;
+}
+
+// @media screen and (max-width: 1280px) {
+//     html {
+//       -moz-transform: scale(1.75, 1.75);
+//       zoom: 0.75;
+//       zoom: 75%;
+//     }
+//   }
+
+//   @media screen and (max-width: 800px) {
+//     html {
+//       -moz-transform: scale(1.50, 1.50);
+//       zoom: 0.50;
+//       zoom: 50%;
+//     }
+//   }

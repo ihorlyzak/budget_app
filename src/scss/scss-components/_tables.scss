@@ -1,0 +1,48 @@
+.table__header,
+.table__header_income {
+	border-bottom: 1px solid $color-black;
+}
+
+.table__data:nth-child(1),
+.table__data_income:nth-child(1) {
+    color: $color-white;
+    font: {
+        family: 'Montserrat', sans-serif;
+        weight: bold;  
+    }
+}
+
+.table {
+	margin: 10px auto 10px;
+	border-spacing: 0; 	
+	border-collapse: collapse;
+    background-color: $color-table-orange;
+    border-radius: $full-border-radius;	
+}
+
+.table__data,
+.table__data_income,
+.table__header {
+	padding: 10px;
+    text-align: center;  
+    font-size: 14px;
+    text-transform: lowercase;
+}
+
+.table__header,
+.table__header_income {
+    text-transform: uppercase;
+    color: $color-white;
+    letter-spacing: 1px;
+    font: {
+        family: 'Montserrat', sans-serif;
+        weight: bold;  
+    }
+}
+
+// !table - income
+.table__data_income,
+.table__header_income {
+	padding: 10px 25px;    
+}
+

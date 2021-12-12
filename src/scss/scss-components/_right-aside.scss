@@ -1,6 +1,4 @@
 .feedback {  
-    width: 100%;
-    max-width: 68px;
     padding: 0 6.5px;
     display: flex;
     flex-direction: column;
@@ -38,12 +36,19 @@
             background: $color-grey;
         }
 
-        &_clear {        
-            position: relative;
+        &_clear {      
             text-align: center;       
             color: $color-white;
             font-size: 16px;           
-            text-decoration: none;               
+            text-decoration: none; 
+            transition: {
+                duration: $main-duration;
+                property: 'transform';
+            } 
+            
+            &:hover {
+                transform: scale(1.2);               
+            }
         }
     }
 

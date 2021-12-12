@@ -1,5 +1,5 @@
 //! Buttons
-.button {
+.button { 
     cursor: pointer;
     padding: 0 100px; 
     line-height: 36px;
@@ -36,16 +36,13 @@
 
 //! Arrow buttons
 .button-container {
-    width: 100%;
     display: flex;
-    justify-content: center;
-    margin: 15px 0;
     text-decoration: none; 
-    text-align: center;
 
     .arrow-down,
     .arrow-up,
     .arrow-right {
+        cursor: pointer;
         font-size: 30px;
         letter-spacing: 10px;
         color: $color-white;

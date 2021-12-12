@@ -6,18 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Count</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
-    <link href="/fonts/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="wrapper">
 
+    <div class="fullscreen">
 
-        <!-- ! 1 FRAME -->
-
-
-        <div class="fullscreen">
+        <div id="home" class="wrapper">
 
             <div class="container">
 
@@ -27,7 +24,7 @@
 
                     @@include('_header.html')
 
-                    <main>
+                    <main class="main">
 
                         @@include('_introduction-section.html')
 
@@ -36,36 +33,19 @@
                         <!-- !for js func -->
                         <!-- <div class="button-container" data-arrows="down"></div> -->
 
-                        <!-- delete -->
-                        <div class="button-container">
-                            <a href="#">
-                                <div class="arrow-down">
-                                    <i class="fas fa-long-arrow-alt-down"></i>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="arrow-right">
-                                    <i class="fas fa-long-arrow-alt-right"></i>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- delete -->
-
+                        <!-- </main> -->
 
                 </div>
 
                 @@include('_right-aside.html')
 
             </div>
+
         </div>
 
+        <!-- ! EXPENSES FRAME -->
 
-        <!-- ! 1 FRAME -->
-
-        <!-- ? EXPENSES FRAME -->
-
-
-        <div class="fullscreen">
+        <div id="expenses" class="wrapper">
 
             <div class="container">
 
@@ -73,50 +53,55 @@
 
                 <div class="content-container">
 
-                    <!-- delete -->
-
-                    <div class="button-container">
-                        <a href="#">
-                            <div class="arrow-up">
-                                <i class="fas fa-long-arrow-alt-up"></i>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- delete -->
-
                     @@include('_expenses-section.html')
 
-                    <!-- !for js func -->
-                    <!-- <div class="button-container" data-arrows="down"></div> -->
-
-                    <!-- delete -->
-
-                    <div class="button-container">
-                        <a href="#">
-                            <div class="arrow-down">
-                                <i class="fas fa-long-arrow-alt-down"></i>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- delete -->
-
-                </div>  
+                </div>
 
                 @@include('_right-aside.html')
 
-
-                <!-- ? EXPENSES FRAME -->
-
-
-                </main>
             </div>
+
         </div>
-        <script src="js/script.min.js"></script>
+
+        <!-- ! INCOME FRAME -->
+
+        <div id="income" class="wrapper">
+
+            <div class="container">
+
+                @@include('_left-aside.html')
+
+                <div class="content-container">
+
+                    @@include('_income-section.html')
+
+                    </main>
+
+                </div>
+
+                @@include('_right-aside.html')
+
+            </div>
+
+        </div>
+
+    </div>
+
+    @@include('_popups.html')
+
+
+    <!-- <script src="js/script.min.js"></script> -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+
+
 
 <!--! <script>
     const arrowController = document.querySelectorAll('.button-container');

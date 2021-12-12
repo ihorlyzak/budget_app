@@ -1,9 +1,21 @@
-<section class="expenses">
-    <h2 class="second__title">My <span class="second__title_red">Expenses</span></h2>
+<section id="expenses" class="expenses section" data-section="expenses">
 
-    <div class="expenses-wrapper">
+    <div class="expenses-header">
+        <div class="title-container">
+            <h2 class="second__title">My <span class="second__title_red">Expenses</span></h2>
+        </div>
+
+        <!-- delete -->
+        <div class="button-container">
+            <i class="fas fa-long-arrow-alt-up arrow-up" data-arrow-to="home"></i>
+        </div>
+        <!-- delete -->
+    </div>
+
+    <div class="expenses-container">
+
         <div class="expenses-container__left">
-            @@include('_expenses-component.html')           
+            @@include('_expenses-component.html')
 
             @@include('_table-component.html')
 
@@ -18,11 +30,26 @@
             </div>
         </div>
 
+
         <div class="expenses-container__right">
-            <div class="expenses__img-container">
-                <img src="./img/expenses_img.png" alt="expenses_img" class="expenses__img">
+            <div>
+                <div class="diagram progress" data-percent="">
+                    <div class="piece left"></div>
+                    <div class="piece right"></div>
+                    <img src="./img/currency_expenses.png" alt="expenses_img" class="expenses__img">
+                </div>
+
+                <h2 class="second__title second__title_grey">EXPENSES<br>27/100%</h2>
             </div>
-            <h2 class="second__title second__title_grey">EXPENSES<br>27/100%</h2>
+
+            <!-- delete -->
+            <div class="button-container">
+                <i class="fas fa-long-arrow-alt-down arrow-down" data-arrow-to="income"></i>
+            </div>
+            <!-- delete -->
         </div>
+
     </div>
+
 </section>
+
