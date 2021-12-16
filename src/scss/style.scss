@@ -3,10 +3,9 @@
 @import 'base/variables';
 @import 'base/mixins';
 
-// html {
-//     overflow: hidden;
-// }
-
+html {
+    overflow: hidden;
+}
 
 @import 'scss-components/global';
 //! body, h
@@ -62,18 +61,3 @@
     opacity: 1;
     visibility: visible;
 }
-// @media screen and (max-width: 1280px) {
-//     html {
-//       -moz-transform: scale(1.75, 1.75);
-//       zoom: 0.75;
-//       zoom: 75%;
-//     }
-//   }
-
-//   @media screen and (max-width: 800px) {
-//     html {
-//       -moz-transform: scale(1.50, 1.50);
-//       zoom: 0.50;
-//       zoom: 50%;
-//     }
-//   }

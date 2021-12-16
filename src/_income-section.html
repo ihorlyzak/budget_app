@@ -1,42 +1,46 @@
-<section class="income section" data-section="income">
+<section id="income" class="income section" data-section="income">
+
+    <div class="button-container">
+        <i class="fas fa-long-arrow-alt-up arrow-up" data-arrow-to="income"></i>
+    </div>
 
     <div class="income-header">
         <div class="title-container">
-            <h2 class="second__title">My <span class="second__title_red">Income</span></h2>
+            <h2 class="main__logo">My <span class="main__logo_red">income</span></h2>
         </div>
-
-        <!-- delete -->
-        <div class="button-container">
-            <i class="fas fa-long-arrow-alt-up arrow-up" data-arrow-to="expenses"></i>
-        </div>
-        <!-- delete -->
     </div>
 
     <div class="income-container">
 
-        <div class="income-left">
+        <div class="income-container__left">
+            @@include('_income-component.html')
 
-            @@include('_income-table-component.html')
+            <div>
+                @@include('_income-table-component.html')
+                
+                <div class="table__buttons">
+                    <button class="button button_small">
+                        <p>Incomes</p>
+                    </button>
+                    <button class="button button_small button_inverted-gradient">
+                        <p>Categories</p>
+                    </button>
+                </div>
 
-            <div class="table__buttons">
-                <button class="button button_small">
-                    <p>Show full income</p>
-                </button>
-                <button class="button button_small button_inverted-gradient">
-                    <p>Show all
-                        categories</p>
-                </button>
             </div>
 
         </div>
 
-        <div class="income-right">
+        <div class="income-container__right">
+            <div>
+                <div class="income__img-container">
+                    <img src="./img/currency_income.png" alt="income_img" class="income__img">
+                </div>
 
-            @@include('_income-component.html')
-
-        </div>
+                <h2 class="second__title second__title_grey">27/100%</h2>
+            </div>          
+        </div>     
 
     </div>
 
 </section>
-

@@ -49,14 +49,14 @@
 // !table - income
 .table__data_income,
 .table__header_income {
-	padding: 10px 25px;    
+	padding: 10px 23px;    
 }
 
-@media (max-width: 992px) {        
-    .expenses-container__left .table {
+@media (max-width: 992px) {       
+    .table {
         display: none;
     }  
-    
+
     .table__buttons {
         margin: 20px 0 0 0;
         flex-direction: column;
