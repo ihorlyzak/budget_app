@@ -21,6 +21,16 @@
         align-items: center;
         background-color: $color-aside-orange;    
         padding: 30px 10px;
+
+
+        @media (max-width: 768px) {        
+            width: calc(100% - 68px);
+        }       
+
+        @media (max-width: 576px) {        
+            width: calc(100% - 30px);
+        } 
+
     }
 
     &__body {       
@@ -38,7 +48,14 @@
         background-color: $color-aside-orange; 
         color: $color-white;
         max-width: 50%;
-        padding: 15px;       
+        padding: 25px 15px;       
+        :nth-child(2) {
+            margin: 25px 0 0 0;
+        }  
+
+        @media (max-width: 350px) {        
+            min-width: 80%;
+        } 
 
         &-item {
             display: block;
@@ -53,7 +70,7 @@
             
             &:hover {
                 color: $color-red;
-            }
+            }         
         }
 
         &-close {
@@ -78,21 +95,13 @@
     }
 }
 
-.register,
-.login {
-    font: {
-        weight: bold;
-        size: 18px;
-    }    
-}
-
-.login {
-    margin: 10px 0 30px 0; 
-}
-
 .aside.open {
     opacity: 1;
     visibility: visible;
     transform: translate(0, 0);
+
+    @media (max-width: 576px) {        
+        transform: translate(35.5px, 0);
+    }
 
 }

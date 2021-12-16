@@ -8,7 +8,7 @@ for (let i = 0; i < aside.length; i++) {
     asideOpenBtn[i].addEventListener('click', () => {
         aside[i].classList.add('open');
 
-        aside[i].addEventListener('click', function (e) {
+        aside[i].addEventListener('click', (e) => {
             if (!e.target.closest('.sidebar-navigation__container')) {
                 aside[i].classList.remove('open');
             }
@@ -23,6 +23,7 @@ for (let i = 0; i < aside.length; i++) {
 }
 
 //! close menu after click
+const asideMenuItems = document.querySelectorAll('.sidebar-navigation__menu-item');
 
 for (let i = 0; i < asideMenuItems.length; i++) {
 

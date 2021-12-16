@@ -1,13 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
 
     //! HOME PAGE 
-
-    //* get started btn
-    document.querySelector('.get_started_btn').onclick = function () {
-        location.href = "#expenses";
-    }
-    //* get started btn
-
     //! HOME PAGE 
 
 

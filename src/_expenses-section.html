@@ -1,15 +1,15 @@
 <section id="expenses" class="expenses section" data-section="expenses">
 
+    <!-- delete -->
+    <div class="button-container">
+        <i class="fas fa-long-arrow-alt-up arrow-up" data-arrow-to="home"></i>
+    </div>
+    <!-- delete -->
+
     <div class="expenses-header">
         <div class="title-container">
-            <h2 class="second__title">My <span class="second__title_red">Expenses</span></h2>
+            <h2 class="main__logo">My <span class="main__logo_red">Expenses</span></h2>
         </div>
-
-        <!-- delete -->
-        <div class="button-container">
-            <i class="fas fa-long-arrow-alt-up arrow-up" data-arrow-to="home"></i>
-        </div>
-        <!-- delete -->
     </div>
 
     <div class="expenses-container">
@@ -17,22 +17,35 @@
         <div class="expenses-container__left">
             @@include('_expenses-component.html')
 
-            @@include('_table-component.html')
+            <div>
+                @@include('_table-component.html')
+                
+                <div class="table__buttons">
+                    <button class="button button_small">
+                        <p>Products</p>
+                    </button>
+                    <button class="button button_small button_inverted-gradient">
+                        <p>Categories</p>
+                    </button>
+                </div>
 
-            <div class="table__buttons">
-                <button class="button button_small">
-                    <p>Show all products</p>
-                </button>
-                <button class="button button_small button_inverted-gradient">
-                    <p>Show all
-                        categories</p>
-                </button>
             </div>
+
         </div>
 
 
         <div class="expenses-container__right">
+
+
             <div>
+                <div class="expenses__img-container" data-percent="">
+                    <img src="./img/currency_expenses.png" alt="expenses_img" class="expenses__img">
+                </div>
+
+                <h2 class="second__title second__title_grey">27/100%</h2>
+            </div>
+
+            <!-- <div>
                 <div class="diagram progress" data-percent="">
                     <div class="piece left"></div>
                     <div class="piece right"></div>
@@ -40,16 +53,17 @@
                 </div>
 
                 <h2 class="second__title second__title_grey">EXPENSES<br>27/100%</h2>
-            </div>
+            </div> -->
 
-            <!-- delete -->
-            <div class="button-container">
-                <i class="fas fa-long-arrow-alt-down arrow-down" data-arrow-to="income"></i>
-            </div>
-            <!-- delete -->
+
         </div>
+
+        <!-- delete -->
+        <div class="button-container">
+            <i class="fas fa-long-arrow-alt-down arrow-down" data-arrow-to="income"></i>
+        </div>
+        <!-- delete -->
 
     </div>
 
 </section>
-

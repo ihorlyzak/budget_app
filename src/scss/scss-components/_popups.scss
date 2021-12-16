@@ -9,7 +9,8 @@
     background-color: rgba(0,0,0,0.7);
     top: 0;
     left: 0;
-    z-index: 5;
+    z-index: 20;
+    transition: 0.5s;
 }
 
 .popup__body {
@@ -226,8 +227,6 @@ select:-webkit-autofill:focus {
     color: $color-white;
     position: relative;
     margin: 0;
-
-
     
     &:hover {
         background: none;

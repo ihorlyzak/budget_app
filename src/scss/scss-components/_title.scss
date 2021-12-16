@@ -1,7 +1,7 @@
 .main__title {
     color: $color-black; 
-    font-size: 36px;   
-    margin: 0 0 40px;  
+    font-size: 24px;   
+    margin: 0 0 10px;  
 }
 
 .second__title {
@@ -25,4 +25,22 @@
     &_uppercase {   
         text-transform: uppercase;       
     }
+}
+
+@media (max-width: 992px) {        
+    .main__title {
+        font-size: 22px;          
+    }      
+}
+
+@media (max-width: 350px) {        
+    .main__title {
+        font-size: 18px;          
+    }      
+}
+
+@media (max-width: 768px) {        
+    .second__title {
+        font-size: 18px;          
+    } 
 }

@@ -40,9 +40,39 @@
     }
 }
 
+.table__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
 // !table - income
 .table__data_income,
 .table__header_income {
 	padding: 10px 25px;    
 }
 
+@media (max-width: 992px) {        
+    .expenses-container__left .table {
+        display: none;
+    }  
+    
+    .table__buttons {
+        margin: 20px 0 0 0;
+        flex-direction: column;
+    }
+    
+} 
+
+@media (max-width: 700px) {      
+    .table__buttons {       
+        flex-direction: row;
+    }    
+} 
+
+@media (max-width: 400px) {              
+    .table__buttons {
+        flex-direction: column; 
+        width: 100px;      
+    }     
+}

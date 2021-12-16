@@ -3,30 +3,82 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: flex-start;  
+    
+    @media (max-width: 1140px) {   
+        height: 100%;     
+        justify-content: center;       
+    } 
 
     &-header {
-        width: 100%;
-        padding: 0 15px;
-        display: flex;
-        justify-content: space-between;
+        position: absolute;
+        top: 15px;  
+
+        @media (max-width: 700px) {   
+            left: 0;
+        }   
+
     }
 
     &-container {      
         display: flex;
         justify-content: space-around;
-        align-items: center;
+        align-items: center;   
+        padding: 30px 0 0 0;     
+
+        // @media (max-width: 700px) {   
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     align-items: center;
+        // }       
+
+        @media (max-width: 700px) {    
+            width: 100%;    
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            align-content: center; 
+        } 
+
+      
+
     }
 
     &-category-wrapper {
-        padding: 0 10px;
+        padding: 0 20px;
+        max-width: 440px;
+        min-width: 170px;
         max-height: 230px;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(65px, 1fr));
+        // grid-template-rows: 1fr 1fr;
         gap: 20px;
         grid-auto-flow: row;  
         overflow: hidden;  
+
+        @media (max-width: 992px) {        
+            max-width: 100%;           
+        } 
+
+        @media (max-width: 700px) {        
+            max-width: 440px;    
+        } 
+
+        @media (max-width: 450px) {        
+            max-width: 300px;              
+        }
+
+        @media (max-width: 400px) {        
+            max-width: 100%;              
+        }
+        // @media (max-width: 450px) {        
+        //     max-width: 100%;              
+        // }
+        // @media (max-width: 700px) {        
+        //     max-width: none;  
+        // }
+
     }
 
     &__category {          
@@ -59,7 +111,13 @@
             transform: scale(1.1);
             background-color: $color-white;
             color: $color-red;
-        }      
+        }   
+        
+        @media (max-width: 500px) {      
+            width: 55px;
+            height: 55px;
+        } 
+        
     } 
 
     &__count {
@@ -75,145 +133,74 @@
 
     &-container__left { 
         padding: 0 30px;
-        max-width: 58%; 
+        max-width: 50%; 
         display: flex;      
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @media (max-width: 800px) {   
+            max-width: 100%; 
+            padding: 0 37px;            
+
+        } 
+
+        @media (max-width: 700px) {   
+            max-width: 100%; 
+            padding: 0;            
+
+        } 
+
+       
+        // @media (max-width: 768px) {        
+        //     padding: 0 90px;    
+        // }
     }
 
-    &-container__right {    
-        padding: 0 30px;
+    &-container__right {  
+        padding: 0 60px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
+
+        @media (max-width: 992px) {        
+            padding: 0 43px;          
+        } 
+
+        @media (max-width: 800px) {   
+            padding: 0 60px;             
+        }    
+
+
+
+      
     }
 
-    // &__img-container {
-    //     width: 400px;
-    //     height: 400px;
-    //     border-radius: 50%;
-    //     border: 16px solid $color-white;
-    //     border-top: 16px solid $color-green;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;   
-        // margin: 0 0 10px;  
-        // position: relative;
+    &__img-container {       
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+        margin: 0 0 10px;  
+        position: relative;
+        max-width: 335px; 
 
-    //     &::after {
-            // content: "";
-            // display: block;
-            // width: 352px;
-            // height: 352px;
-            // border-radius: 50%;
-            // background-color: $color-red;
-            // position: absolute;
-            // z-index: 0;
-    //     }
-    // }
+        @media (max-width: 800px) {   
+            max-width: 250px;             
+        }   
+
+        @media (max-width: 700px) {        
+            max-width: 100px;     
+        } 
+
+    }
 
     &__img {
         display: block;
-        max-width: 250px;       
-        max-height: 280px; 
-        z-index: 4;
+        width: 100%;
+        z-index: 4;      
     }
 
 }
 
-// ДІАГРАМА
-.diagram {
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    background: $color-input-orange;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-    margin: 0 0 10px;  
-    position: relative;
-}
-
-.diagram::before {
-    content: "";
-    display: block;
-    width: 352px;
-    height: 352px;
-    border-radius: 50%;
-    background-color: $color-red;
-    position: absolute;
-    z-index: 3;
-}
-
-.diagram .piece {
-    width: 100%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    position: absolute;
-}
-
-.diagram .piece::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 50%;
-    height: 100%;
-}
-
-.diagram .piece.left {
-    transform: rotate(0deg);
-    z-index: 2;
-    border-radius: 50%; /* only FireFox < 75.0v (fix bug)*/
-}
-
-.diagram.over_50 .piece.left {
-    transform: rotate(180deg);
-}
-
-.diagram .piece.right {
-    transform: rotate(180deg);
-    z-index: 1;
-    border-radius: 50%; /* only FireFox < 75.0v (fix bug)*/
-}
-
-.diagram.over_50 .piece.right {
-    transform: rotate(360deg);
-}
-
-.diagram .left::before {
-    background: $color-white;
-}
-
-.diagram.over_50 .left::before {
-    background: $color-input-orange;
-}
-
-.diagram .right::before {
-    background: $color-white;
-}
-
-.diagram_income {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    background: $color-input-orange;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-    margin: 0 0 10px;  
-    position: relative;
-}
-
-.diagram_income::before {  
-    width: 215px;
-    height: 215px;   
-}
 

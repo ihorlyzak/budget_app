@@ -26,4 +26,9 @@
         align-content: center;
         margin: 0 0 10px;        
     }  
+
+    @media (max-width: 700px) {        
+        display: none;
+    } 
+
 }

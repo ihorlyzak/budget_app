@@ -27,7 +27,6 @@ document.body.addEventListener('click', (e) => {
         }
     }
 });
-//! dots active
 
 
 
@@ -71,25 +70,33 @@ for (let i = 0; i < arrowsContainer.length; i++) {
 
 
 //! aside menu activating dots from left aside nav menu
-const asideMenuItemsContainer = document.querySelectorAll('.sidebar-navigation__menu');
-const asideMenuItems = document.querySelectorAll('.sidebar-navigation__menu-item');
+document.body.addEventListener('click', (e) => {
 
-for (let i = 0; i < asideMenuItemsContainer.length; i++) {
+    if (e.target.classList.contains('sidebar-navigation__menu-item') || e.target.classList.contains('header__menu-item')) {
+        
+        removeClassActive();
 
-    asideMenuItemsContainer[i].addEventListener('click', (e) => {
+        for (let i = 0; i < dots.length; i++) {
 
-        if (e.target.classList.contains('sidebar-navigation__menu-item')) {
-            removeClassActive();
-
-            for (let i = 0; i < dots.length; i++) {
-
-                if (e.target.dataset.asideLink === dots[i].dataset.asideLink)
-                    dots[i].classList.add('scroll__menu-item_active');
-
-            }
+            if (e.target.dataset.asideLink === dots[i].dataset.asideLink)
+                dots[i].classList.add('scroll__menu-item_active');
 
         }
-    });
+
+    }
+});
+
+
+
+//! right aside home btn
+const asideHome = document.querySelectorAll('.aside-home');
+
+for (let i = 0; i < pages.length; i++) {
+    asideHome[i].onclick = () => {
+        removeClassActive();
+
+        dots[0].classList.add('scroll__menu-item_active');
+    }
 }
 
 
