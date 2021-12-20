@@ -5,11 +5,6 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
     //! EXPENSES PAGE
-
-    //* progress sircle 
-    @@include('_progress-sircle.js')
-    //* progress sircle 
-
     //! EXPENSES PAGE
 
 

@@ -51,4 +51,49 @@ document.querySelector('.get_started_btn').onclick = function () {
     popupRegister.classList.add('active');
 }
 //! open register popup
-    
+
+
+//! open expenses popup
+const addExpense = document.querySelectorAll('.expenses__element');
+const addExpensePopup = document.getElementById('expenses__popup');
+// open popup
+addExpense.forEach(element => {
+    element.onclick = function() {
+        addExpensePopup.classList.add('active');
+    }
+});
+
+// close popup
+addExpensePopup.addEventListener('click', (e) => {
+    if (e.target.classList.contains('popup__close')) {
+        addExpensePopup.classList.remove('active');
+    }
+    if (!e.target.closest('.popup__content')) {
+        addExpensePopup.classList.remove('active');
+    }
+});
+
+//! open expenses popup
+
+
+//! open income popup
+const addIncome = document.querySelectorAll('.income__element');
+const addIncomePopup = document.getElementById('income__popup');
+// open popup
+addIncome.forEach(element => {
+    element.onclick = function() {
+        addIncomePopup.classList.add('active');
+    }
+});
+
+// close popup
+addIncomePopup.addEventListener('click', (e) => {
+    if (e.target.classList.contains('popup__close')) {
+        addIncomePopup.classList.remove('active');
+    }
+    if (!e.target.closest('.popup__content')) {
+        addIncomePopup.classList.remove('active');
+    }
+});
+
+//! open expenses popup
