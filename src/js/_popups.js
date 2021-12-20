@@ -1,6 +1,6 @@
-//! register to login form
-const login = document.getElementById("login");
-const register = document.getElementById("register");
+//! register to login popup
+const login = document.getElementById('login');
+const register = document.getElementById('register');
 const loginBtn = document.querySelector('.popup__form-button_login');
 const registerBtn = document.querySelector('.popup__form-button_register');
 
@@ -17,16 +17,10 @@ loginBtn.onclick = function () {
     register.style.left = "500px";
     registerFormBtn.style.left = "0";
 }
-//! register to login form
+//! register to login popup
 
 
-
-
-
-
-
-
-//! open login popup
+//! open register popup
 const loginbtn = document.querySelectorAll('.login-container');
 const popupRegister = document.getElementById('register-popup');
 const popupCloseBtn = document.querySelector('.popup__close');
@@ -56,4 +50,5 @@ for (let i = 0; i < loginbtn.length; i++) {
 document.querySelector('.get_started_btn').onclick = function () {
     popupRegister.classList.add('active');
 }
+//! open register popup
     

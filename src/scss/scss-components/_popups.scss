@@ -2,7 +2,6 @@
 .popup {
     opacity: 0;
     visibility: hidden;
-
     position: fixed;
     width: 100%;
     height: 100%;
@@ -10,7 +9,7 @@
     top: 0;
     left: 0;
     z-index: 20;
-    transition: 0.5s;
+    transition: 0.5s;  
 }
 
 .popup__body {
@@ -31,6 +30,23 @@
     align-items: center;
     justify-content: space-between;
     border-radius: $full-border-radius;  
+
+    @media (max-width: 500px) {   
+        min-width: 350px; 
+    } 
+
+    @media (max-width: 450px) {   
+        min-width: 300px; 
+    } 
+
+    @media (max-width: 450px) {   
+        max-height: 550px;
+    } 
+
+    @media (max-width: 300px) {   
+        min-width: 250px; 
+    } 
+
 }
 
 .popup__header {
