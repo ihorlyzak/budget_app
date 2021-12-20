@@ -54,9 +54,7 @@ for (let i = 0; i < arrowsContainer.length; i++) {
         //! to top
         if (e.target.classList.contains('arrow-up')) {
             removeClassActive();
-
-            for (let i = 0; i < dots.length; i++) {
-
+            for (let i = 0; i < dots.length; i++) {              
                 if (e.target.dataset.arrowTo === dots[i].dataset.asideLink) {
                     dots[i].classList.add('scroll__menu-item_active');
                 }
